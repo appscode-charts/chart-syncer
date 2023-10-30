@@ -20,7 +20,7 @@ jobs:
     - name: Install
       run: |
         echo "install chart-syncer"
-        GOBIN=/usr/local/bin go install github.com/appscode-charts/chart-syncer@v0.0.2
+        GOBIN=/usr/local/bin go install github.com/appscode-charts/chart-syncer@v0.0.3
         echo
         echo "install helm 3"
         pushd /usr/local/bin && sudo curl -fsSLO https://github.com/x-helm/helm/releases/latest/download/helm && sudo chmod +x helm && popd

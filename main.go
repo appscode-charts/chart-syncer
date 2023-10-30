@@ -58,14 +58,15 @@ func main() {
 
 		_, found := ImageDigest(*registry, *name, result.Version)
 		if found {
-			klog.Infof("skipping syncing %s/%s:%s", *registry, *name, result.Version)
+			klog.Infof("found %s/%s:%s, skipping ...", *registry, *name, result.Version)
 			continue
 		}
 
 		// helm pull appscode/ace-installer --version=v2023.03.23
 		err := sh.Command("helm", "pull", fullname, "--version", result.Version).Run()
 		if err != nil {
-			panic(err)
+			klog.Errorln(err)
+			continue
 		}
 
 		// flux2-2.10.6.tgz
