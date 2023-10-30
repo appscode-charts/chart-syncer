@@ -21,6 +21,13 @@ jobs:
       run: |
         GOBIN=/usr/local/bin go install github.com/appscode-charts/chart-syncer@latest
 
+    - name: Log in to the GitHub Container registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Sync
       run: |
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2
