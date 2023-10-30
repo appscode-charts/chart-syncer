@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 
 	"github.com/google/go-containerregistry/pkg/authn"
 	"github.com/google/go-containerregistry/pkg/crane"
@@ -69,6 +70,10 @@ func main() {
 
 		// flux2-2.10.6.tgz
 		filename := fmt.Sprintf("%s-%s.tgz", *name, result.Version)
+
+		if _, err := os.Stat("/tmp/" + filename); os.IsNotExist(err) {
+			continue
+		}
 
 		// helm push flux2-2.10.6.tgz oci://ghcr.io/gh-walker
 		err = sh.Command("helm", "push", filename, fmt.Sprintf("oci://%s", *registry)).Run()
