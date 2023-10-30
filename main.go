@@ -71,7 +71,7 @@ func main() {
 		filename := fmt.Sprintf("%s-%s.tgz", *name, result.Version)
 
 		// helm push flux2-2.10.6.tgz oci://ghcr.io/gh-walker
-		err = sh.Command("helm", "push", filename, fmt.Sprintf("oci://%s/%s", *registry, *name)).Run()
+		err = sh.Command("helm", "push", filename, fmt.Sprintf("oci://%s", *registry)).Run()
 		if err != nil {
 			panic(err)
 		}
