@@ -34,7 +34,18 @@ jobs:
 
     - name: Sync
       run: |
+        chart-syncer -r ghcr.io/appscode-charts -a aws-ebs-csi-driver -u https://kubernetes-sigs.github.io/aws-ebs-csi-driver -c aws-ebs-csi-driver
+        chart-syncer -r ghcr.io/appscode-charts -a cert-manager -u https://charts.jetstack.io -c cert-manager
+        chart-syncer -r ghcr.io/appscode-charts -a cluster-autoscaler -u https://kubernetes.github.io/autoscaler -c cluster-autoscaler
+        chart-syncer -r ghcr.io/appscode-charts -a crossplane -u https://charts.crossplane.io/stable -c crossplane
+        chart-syncer -r ghcr.io/appscode-charts -a falcosecurity -u https://falcosecurity.github.io/charts -c falco
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-multi-tenancy
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-notification
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-sync
+        chart-syncer -r ghcr.io/appscode-charts -a gatekeeper -u https://open-policy-agent.github.io/gatekeeper/charts -c gatekeeper
+        chart-syncer -r ghcr.io/appscode-charts -a kedacore -u https://kedacore.github.io/charts -c keda
+        chart-syncer -r ghcr.io/appscode-charts -a kedacore -u https://kedacore.github.io/charts -c keda-add-ons-http
+        chart-syncer -r ghcr.io/appscode-charts -a nats -u https://nats-io.github.io/k8s/helm/charts -c nats
+        chart-syncer -r ghcr.io/appscode-charts -a prometheus-community -u https://prometheus-community.github.io/helm-charts -c kube-prometheus-stack
+        chart-syncer -r ghcr.io/appscode-charts -a stakater -u https://stakater.github.io/stakater-charts -c reloader
