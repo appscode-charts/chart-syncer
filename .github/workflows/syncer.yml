@@ -23,4 +23,7 @@ jobs:
 
     - name: Sync
       run: |
-        chart-syncer -h
+        chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2
+        chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-multi-tenancy
+        chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-notification
+        chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-sync
