@@ -54,4 +54,5 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a piraeus-charts -u https://piraeus.io/helm-charts -c snapshot-controller
         chart-syncer -r ghcr.io/appscode-charts -a prometheus-community -u https://prometheus-community.github.io/helm-charts -c kube-prometheus-stack
         chart-syncer -r ghcr.io/appscode-charts -a stakater -u https://stakater.github.io/stakater-charts -c reloader
+        chart-syncer -r ghcr.io/appscode-charts -a topolvm -u https://topolvm.github.io/topolvm -c topolvm
         chart-syncer -r ghcr.io/appscode-charts -a vcluster -u https://charts.loft.sh -c vcluster
