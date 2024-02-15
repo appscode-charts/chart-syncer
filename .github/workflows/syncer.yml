@@ -60,3 +60,13 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a stakater -u https://stakater.github.io/stakater-charts -c reloader
         chart-syncer -r ghcr.io/appscode-charts -a topolvm -u https://topolvm.github.io/topolvm -c topolvm
         chart-syncer -r ghcr.io/appscode-charts -a vcluster -u https://charts.loft.sh -c vcluster
+
+        # secret management charts
+        chart-syncer -r ghcr.io/appscode-charts -a aws-secrets-manager -u https://aws.github.io/secrets-store-csi-driver-provider-aws -c secrets-store-csi-driver-provider-aws
+        chart-syncer -r ghcr.io/appscode-charts -a csi-secrets-store-provider-azure -u https://azure.github.io/secrets-store-csi-driver-provider-azure/charts -c csi-secrets-store-provider-azure
+        chart-syncer -r ghcr.io/appscode-charts -a external-secrets -u https://charts.external-secrets.io -c external-secrets
+        chart-syncer -r ghcr.io/appscode-charts -a hashicorp -u https://helm.releases.hashicorp.com -c vault
+        chart-syncer -r ghcr.io/appscode-charts -a hashicorp -u https://helm.releases.hashicorp.com -c vault-secrets-operator
+        chart-syncer -r ghcr.io/appscode-charts -a sealed-secrets -u https://bitnami-labs.github.io/sealed-secrets -c sealed-secrets
+        chart-syncer -r ghcr.io/appscode-charts -a secrets-store-csi-driver -u https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts -c secrets-store-csi-driver
+        # secrets-store-csi-driver-provider-gcp is manually published
