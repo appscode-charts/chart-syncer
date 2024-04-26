@@ -52,7 +52,8 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a longhorn -u https://charts.longhorn.io -c longhorn
         chart-syncer -r ghcr.io/appscode-charts -a metrics-server -u https://kubernetes-sigs.github.io/metrics-server -c metrics-server
         chart-syncer -r ghcr.io/appscode-charts -a nats -u https://nats-io.github.io/k8s/helm/charts -c nats
-        chart-syncer -r ghcr.io/appscode-charts -a openfga -u https://openfga.github.io/helm-charts -c openfga
+        # manually push openfga chart without the json schema
+        # chart-syncer -r ghcr.io/appscode-charts -a openfga -u https://openfga.github.io/helm-charts -c openfga
         # chart-syncer -r ghcr.io/appscode-charts -a ocm -u https://openclustermanagement.blob.core.windows.net/releases -c cluster-gateway-addon-manager
         # chart-syncer -r ghcr.io/appscode-charts -a ocm -u https://openclustermanagement.blob.core.windows.net/releases -c cluster-proxy
         # chart-syncer -r ghcr.io/appscode-charts -a ocm -u https://openclustermanagement.blob.core.windows.net/releases -c managed-serviceaccount
