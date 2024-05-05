@@ -57,6 +57,7 @@ jobs:
         # chart-syncer -r ghcr.io/appscode-charts -a ocm -u https://openclustermanagement.blob.core.windows.net/releases -c cluster-gateway-addon-manager
         # chart-syncer -r ghcr.io/appscode-charts -a ocm -u https://openclustermanagement.blob.core.windows.net/releases -c cluster-proxy
         # chart-syncer -r ghcr.io/appscode-charts -a ocm -u https://openclustermanagement.blob.core.windows.net/releases -c managed-serviceaccount
+        chart-syncer -r ghcr.io/appscode-charts -a open-telemetry -u https://open-telemetry.github.io/opentelemetry-helm-charts -c opentelemetry-operator
         # https://github.com/kubernetes-csi/external-snapshotter/issues/812
         chart-syncer -r ghcr.io/appscode-charts -a piraeus-charts -u https://piraeus.io/helm-charts -c snapshot-controller
         chart-syncer -r ghcr.io/appscode-charts -a prometheus-community -u https://prometheus-community.github.io/helm-charts -c kube-prometheus-stack
