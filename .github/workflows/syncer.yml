@@ -39,6 +39,7 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a cluster-autoscaler -u https://kubernetes.github.io/autoscaler -c cluster-autoscaler
         chart-syncer -r ghcr.io/appscode-charts -a coroot -u https://coroot.github.io/helm-charts -c coroot
         chart-syncer -r ghcr.io/appscode-charts -a crossplane -u https://charts.crossplane.io/stable -c crossplane
+        # https://github.com/kubernetes-csi/csi-driver-nfs/tree/master/charts
         chart-syncer -r ghcr.io/appscode-charts -a csi-driver-nfs -u https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts -c csi-driver-nfs
         chart-syncer -r ghcr.io/appscode-charts -a falcosecurity -u https://falcosecurity.github.io/charts -c falco
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2
@@ -53,6 +54,8 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a longhorn -u https://charts.longhorn.io -c longhorn
         chart-syncer -r ghcr.io/appscode-charts -a metrics-server -u https://kubernetes-sigs.github.io/metrics-server -c metrics-server
         chart-syncer -r ghcr.io/appscode-charts -a nats -u https://nats-io.github.io/k8s/helm/charts -c nats
+        # https://github.com/openebs/openebs
+        chart-syncer -r ghcr.io/appscode-charts -a openebs -u https://openebs.github.io/openebs -c openebs
         # manually push openfga chart without the json schema
         # chart-syncer -r ghcr.io/appscode-charts -a openfga -u https://openfga.github.io/helm-charts -c openfga
         # chart-syncer -r ghcr.io/appscode-charts -a ocm -u https://openclustermanagement.blob.core.windows.net/releases -c cluster-gateway-addon-manager
