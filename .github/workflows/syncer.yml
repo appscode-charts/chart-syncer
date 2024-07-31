@@ -47,7 +47,7 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-notification
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-sync
         chart-syncer -r ghcr.io/appscode-charts -a gatekeeper -u https://open-policy-agent.github.io/gatekeeper/charts -c gatekeeper
-        chart-syncer -r ghcr.io/appscode-charts -a ingress-nginx -u https://kubernetes.github.io/ingress-nginx -c ingress-nginx
+        # chart-syncer -r ghcr.io/appscode-charts -a ingress-nginx -u https://kubernetes.github.io/ingress-nginx -c ingress-nginx
         chart-syncer -r ghcr.io/appscode-charts -a kedacore -u https://kedacore.github.io/charts -c keda
         chart-syncer -r ghcr.io/appscode-charts -a kedacore -u https://kedacore.github.io/charts -c keda-add-ons-http
         chart-syncer -r ghcr.io/appscode-charts -a kepler -u https://sustainable-computing-io.github.io/kepler-helm-chart -c kepler
