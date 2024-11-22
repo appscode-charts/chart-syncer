@@ -78,7 +78,7 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a topolvm -u https://topolvm.github.io/topolvm -c topolvm
 
         # https://github.com/loft-sh/vcluster/pull/2003
-        # chart-syncer -r ghcr.io/appscode-charts -a vcluster -u https://charts.loft.sh -c vcluster
+        chart-syncer -r ghcr.io/appscode-charts -a vcluster -u https://charts.loft.sh -c vcluster
         # chart-syncer -r ghcr.io/appscode-charts -a vcluster -u https://charts.loft.sh -c vcluster-k0s
         # chart-syncer -r ghcr.io/appscode-charts -a vcluster -u https://charts.loft.sh -c vcluster-k8s
 
