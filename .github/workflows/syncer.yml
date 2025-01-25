@@ -49,7 +49,7 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a gatekeeper -u https://open-policy-agent.github.io/gatekeeper/charts -c gatekeeper
         # Because of this check, we can't use the official chart as-is
         # https://github.com/kubernetes/ingress-nginx/blob/helm-chart-4.11.1/charts/ingress-nginx/templates/_helpers.tpl#L248-L254
-        # chart-syncer -r ghcr.io/appscode-charts -a ingress-nginx -u https://kubernetes.github.io/ingress-nginx -c ingress-nginx
+        chart-syncer -r ghcr.io/appscode-charts -a ingress-nginx -u https://kubernetes.github.io/ingress-nginx -c ingress-nginx
         chart-syncer -r ghcr.io/appscode-charts -a kedacore -u https://kedacore.github.io/charts -c keda
         chart-syncer -r ghcr.io/appscode-charts -a kedacore -u https://kedacore.github.io/charts -c keda-add-ons-http
         chart-syncer -r ghcr.io/appscode-charts -a kepler -u https://sustainable-computing-io.github.io/kepler-helm-chart -c kepler
