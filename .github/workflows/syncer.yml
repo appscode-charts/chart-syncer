@@ -41,6 +41,7 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a crossplane -u https://charts.crossplane.io/stable -c crossplane
         # https://github.com/kubernetes-csi/csi-driver-nfs/tree/master/charts
         chart-syncer -r ghcr.io/appscode-charts -a csi-driver-nfs -u https://raw.githubusercontent.com/kubernetes-csi/csi-driver-nfs/master/charts -c csi-driver-nfs
+        chart-syncer -r ghcr.io/appscode-charts -a eks -u https://aws.github.io/eks-charts -c aws-load-balancer-controller
         chart-syncer -r ghcr.io/appscode-charts -a falcosecurity -u https://falcosecurity.github.io/charts -c falco
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2
         chart-syncer -r ghcr.io/appscode-charts -a fluxcd-community -u https://fluxcd-community.github.io/helm-charts -c flux2-multi-tenancy
