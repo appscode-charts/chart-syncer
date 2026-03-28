@@ -93,3 +93,11 @@ jobs:
         chart-syncer -r ghcr.io/appscode-charts -a sealed-secrets -u https://bitnami-labs.github.io/sealed-secrets -c sealed-secrets
         chart-syncer -r ghcr.io/appscode-charts -a secrets-store-csi-driver -u https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts -c secrets-store-csi-driver
         # secrets-store-csi-driver-provider-gcp is manually published
+
+        # argo-cd
+        chart-syncer -r ghcr.io/appscode-charts -a argo -u https://argoproj.github.io/argo-helm -c argo-cd
+        chart-syncer -r ghcr.io/appscode-charts -a argo -u https://argoproj.github.io/argo-helm -c argo-events
+        chart-syncer -r ghcr.io/appscode-charts -a argo -u https://argoproj.github.io/argo-helm -c argo-rollouts
+        chart-syncer -r ghcr.io/appscode-charts -a argo -u https://argoproj.github.io/argo-helm -c argo-workflows
+        chart-syncer -r ghcr.io/appscode-charts -a argo -u https://argoproj.github.io/argo-helm -c argocd-apps
+        chart-syncer -r ghcr.io/appscode-charts -a argo -u https://argoproj.github.io/argo-helm -c argocd-image-updater
